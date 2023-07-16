@@ -14,8 +14,10 @@ if(isset($message)){
 <header class="header">
 
    <section class="flex">
-
-      <a href="home.php" class="logo">Educa.</a>
+      <div style="display:flex; align-items:center; gap:1rem;">
+         <img style="height:7rem;" src="components/logo.png" alt="">
+         <a href="home.php" class="logo">codeRASI</a>
+      </div>
 
       <form action="search_course.php" method="post" class="search-form">
          <input type="text" name="search_course" placeholder="search courses..." required maxlength="100">
@@ -100,8 +102,9 @@ if(isset($message)){
       <a href="home.php"><i class="fas fa-home"></i><span>home</span></a>
       <a href="about.php"><i class="fas fa-question"></i><span>about us</span></a>
       <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
-      <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+      <!-- <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a> -->
       <a href="contact.php"><i class="fas fa-headset"></i><span>contact us</span></a>
+      <a href="components/user_logout.php" onclick="return confirm('logout from this website?');"><i class="fa-solid fa-right-from-bracket"></i><span>logout</span></a>
    </nav>
 
 </div>

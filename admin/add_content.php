@@ -36,19 +36,30 @@ if(isset($_POST['submit'])){
    $video_tmp_name = $_FILES['video']['tmp_name'];
    $video_folder = '../uploaded_files/'.$rename_video;
 
+   $pdfFile = $_FILES['pdfFile']['name'];
+   $pdfFile_ext = pathinfo($pdfFile, PATHINFO_EXTENSION);
+   $rename_pdfFile = unique_id().'.'.$pdfFile_ext;
+   $pdfFile_tmp_name = $_FILES['pdfFile']['tmp_name'];
+   $pdfFile_folder = '../uploaded_files/'.$rename_pdfFile;
+
+   $descriptionsec = $_POST['desc'];
+   $descriptionsec = filter_var($descriptionsec, FILTER_SANITIZE_STRING);
+
    if($thumb_size > 2000000){
       $message[] = 'image size is too large!';
    }else{
-      $add_playlist = $conn->prepare("INSERT INTO `content`(id, tutor_id, playlist_id, title, description, video, thumb, status) VALUES(?,?,?,?,?,?,?,?)");
-      $add_playlist->execute([$id, $tutor_id, $playlist, $title, $description, $rename_video, $rename_thumb, $status]);
+      $add_playlist = $conn->prepare("INSERT INTO `content`(id, tutor_id, playlist_id, title, description, video, thumb, status, descr, pdfFile) VALUES(?,?,?,?,?,?,?,?,?,?)");
+      $add_playlist->execute([$id, $tutor_id, $playlist, $title, $description, $rename_video, $rename_thumb, $status, $descriptionsec, $rename_pdfFile]);
       move_uploaded_file($thumb_tmp_name, $thumb_folder);
       move_uploaded_file($video_tmp_name, $video_folder);
+      move_uploaded_file($pdfFile_tmp_name, $pdfFile_folder);
       $message[] = 'new course uploaded!';
    }
 
    
 
 }
+
 
 ?>
 
@@ -107,6 +118,8 @@ if(isset($_POST['submit'])){
       </select>
       <p>select thumbnail <span>*</span></p>
       <input type="file" name="thumb" accept="image/*" required class="box">
+      <textarea name="desc" id="" class="box" cols="30" rows="10" placeholder="enter content"></textarea>
+      <input type="file" name="pdfFile">
       <p>select video <span>*</span></p>
       <input type="file" name="video" accept="video/*" required class="box">
       <input type="submit" value="upload video" name="submit" class="btn">

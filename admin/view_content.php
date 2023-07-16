@@ -100,9 +100,17 @@ if(isset($_POST['delete_comment'])){
             $total_comments = $count_comments->rowCount();
    ?>
    <div class="container">
-      <video src="../uploaded_files/<?= $fetch_content['video']; ?>" autoplay controls poster="../uploaded_files/<?= $fetch_content['thumb']; ?>" class="video"></video>
+   <video src="../uploaded_files/<?= $fetch_content['video']; ?>" autoplay controls poster="../uploaded_files/<?= $fetch_content['thumb']; ?>" class="video"></video>
       <div class="date"><i class="fas fa-calendar"></i><span><?= $fetch_content['date']; ?></span></div>
       <h3 class="title"><?= $fetch_content['title']; ?></h3>
+      <h2><?= $fetch_content['descr']?></h2>
+      <div>
+      <?php
+      if ($fetch_content['pdfFile']) {
+      echo '<a style="font-size:2rem;" href="../uploaded_files/' . $fetch_content['pdfFile'] . '" target="_blank">Read the Full documantation</a>';
+      }
+      ?>
+</div>
       <div class="flex">
          <div><i class="fas fa-heart"></i><span><?= $total_likes; ?></span></div>
          <div><i class="fas fa-comment"></i><span><?= $total_comments; ?></span></div>

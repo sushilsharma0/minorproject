@@ -1,8 +1,8 @@
 <?php
 
-   $db_name = 'mysql:host=localhost;dbname=projectsecond';
-   $user_name = 'sushilDatabase';
-   $user_password = 'sushilsharma#13579';
+   $db_name = 'mysql:host=localhost;dbname=myFirstProject';
+   $user_name = 'root';
+   $user_password = '';
 
    $conn = new PDO($db_name, $user_name, $user_password);
 
