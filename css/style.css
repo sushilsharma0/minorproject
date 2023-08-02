@@ -1467,7 +1467,7 @@ section{
 
 
 .footer{
-   position: sticky;
+   position: fixed;
    bottom: 0; right: 0; left: 0;
    background-color: var(--white);
    border-top: var(--border);

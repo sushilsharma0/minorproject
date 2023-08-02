@@ -680,6 +680,7 @@ section{
    border-radius: .5rem;
    padding: 2rem;
    padding-top: 1rem;
+   padding-bottom: 8rem;
 }
 
 .video-form form p{
@@ -1000,7 +1001,7 @@ section{
 
 
 .footer{
-   position: sticky;
+   position: fixed;
    bottom: 0; right: 0; left: 0;
    background-color: var(--white);
    border-top: var(--border);

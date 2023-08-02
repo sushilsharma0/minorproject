@@ -197,6 +197,13 @@ if(isset($_POST['update_now'])){
    <div class="video-details">
       <video src="uploaded_files/<?= $fetch_content['video']; ?>" class="video" poster="uploaded_files/<?= $fetch_content['thumb']; ?>" controls autoplay></video>
       <h3 class="title"><?= $fetch_content['title']; ?></h3>
+      <div style="margin:2rem 0;">
+         <?php
+      if ($fetch_content['pdfFile']) {
+         echo '<a style="font-size:2rem;" href="uploaded_files/' . $fetch_content['pdfFile'] . '" target="_blank">Read the Full documantation</a>';
+      }
+      ?>
+      </div>
       <div class="info">
          <p><i class="fas fa-calendar"></i><span><?= $fetch_content['date']; ?></span></p>
          <p><i class="fas fa-heart"></i><span><?= $total_likes; ?> likes</span></p>
@@ -210,6 +217,7 @@ if(isset($_POST['update_now'])){
       </div>
       <form action="" method="post" class="flex">
          <input type="hidden" name="content_id" value="<?= $content_id; ?>">
+         
          <a href="playlist.php?get_id=<?= $fetch_content['playlist_id']; ?>" class="inline-btn">view playlist</a>
          <?php
             if($verify_likes->rowCount() > 0){
@@ -251,7 +259,7 @@ if(isset($_POST['update_now'])){
    <h1 class="heading">user comments</h1>
 
    
-   <div class="show-comments">
+   <div class="show-comments" style="margin-bottom:8rem;">
       <?php
          $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE content_id = ?");
          $select_comments->execute([$get_id]);

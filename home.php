@@ -75,7 +75,7 @@ $total_bookmarked = $select_bookmark->rowCount();
       }
       ?>
 
-      <div class="box">
+      <!-- <div class="box">
          <h3 class="title">top categories</h3>
          <div class="flex">
             <a href="search_course.php?"><i class="fas fa-code"></i><span>development</span></a>
@@ -87,7 +87,7 @@ $total_bookmarked = $select_bookmark->rowCount();
             <a href="#"><i class="fas fa-cog"></i><span>software</span></a>
             <a href="#"><i class="fas fa-vial"></i><span>science</span></a>
          </div>
-      </div>
+      </div> -->
 
       <div class="box">
          <h3 class="title">popular topics</h3>
@@ -101,11 +101,11 @@ $total_bookmarked = $select_bookmark->rowCount();
          </div>
       </div>
 
-      <div class="box tutor">
+      <!-- <div class="box tutor">
          <h3 class="title">become a tutor</h3>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, laudantium.</p>
          <a href="admin/register.php" class="inline-btn">get started</a>
-      </div>
+      </div> -->
 
    </div>
 

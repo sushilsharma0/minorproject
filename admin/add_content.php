@@ -86,7 +86,7 @@ if(isset($_POST['submit'])){
 
    <h1 class="heading">upload content</h1>
 
-   <form action="" method="post" enctype="multipart/form-data">
+   <form action="" method="post" enctype="multipart/form-data" style="padding-bottom:8rem;">
       <p>video status <span>*</span></p>
       <select name="status" class="box" required>
          <option value="" selected disabled>-- select status</option>
@@ -119,20 +119,14 @@ if(isset($_POST['submit'])){
       <p>select thumbnail <span>*</span></p>
       <input type="file" name="thumb" accept="image/*" required class="box">
       <textarea name="desc" id="" class="box" cols="30" rows="10" placeholder="enter content"></textarea>
-      <input type="file" name="pdfFile">
+      <p>selet pdf file <span>*</span></p>
+      <input type="file" name="pdfFile" accept="application/pdf" class="box">
       <p>select video <span>*</span></p>
       <input type="file" name="video" accept="video/*" required class="box">
       <input type="submit" value="upload video" name="submit" class="btn">
    </form>
 
 </section>
-
-
-
-
-
-
-
 
 
 

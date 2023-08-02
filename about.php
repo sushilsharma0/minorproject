@@ -41,7 +41,8 @@ if(isset($_COOKIE['user_id'])){
 
       <div class="content">
          <h3>why choose us?</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nobis distinctio, nisi consequatur ad sequi, rem odit fugiat assumenda eligendi iure aut sunt ratione, tempore porro expedita quisquam.</p>
+         <p>
+Choose our LMS website because we offer a user-friendly interface with diverse course content and interactive learning tools. Our platform is mobile-compatible and provides detailed analytics for progress tracking. You can customize and brand the LMS to fit your organization, and we prioritize security and privacy. Our 24/7 support ensures a smooth learning experience, and the scalable platform is cost-effective.</p>
          <a href="courses.html" class="inline-btn">our courses</a>
       </div>
 
@@ -52,7 +53,7 @@ if(isset($_COOKIE['user_id'])){
       <div class="box">
          <i class="fas fa-graduation-cap"></i>
          <div>
-            <h3>+1k</h3>
+            <h3>+50</h3>
             <span>online courses</span>
          </div>
       </div>
@@ -60,7 +61,7 @@ if(isset($_COOKIE['user_id'])){
       <div class="box">
          <i class="fas fa-user-graduate"></i>
          <div>
-            <h3>+25k</h3>
+            <h3>+100</h3>
             <span>brilliants students</span>
          </div>
       </div>
@@ -68,7 +69,7 @@ if(isset($_COOKIE['user_id'])){
       <div class="box">
          <i class="fas fa-chalkboard-user"></i>
          <div>
-            <h3>+5k</h3>
+            <h3>+5</h3>
             <span>expert teachers</span>
          </div>
       </div>
@@ -89,18 +90,18 @@ if(isset($_COOKIE['user_id'])){
 
 <!-- reviews section starts  -->
 
-<section class="reviews">
+<section class="reviews" style="padding-bottom:12rem;">
 
    <h1 class="heading">student's reviews</h1>
 
    <div class="box-container">
 
       <div class="box">
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio consectetur assumenda fugit maxime unde at ex?</p>
+         <p>Request Feedback: Reach out to your website users, customers, or clients and ask them to provide feedback.</p>
          <div class="user">
             <img src="images/pic-2.jpg" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>Sushil</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -113,11 +114,11 @@ if(isset($_COOKIE['user_id'])){
       </div>
 
       <div class="box">
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio consectetur assumenda fugit maxime unde at ex?</p>
+         <p>Use Review Platforms: Encourage users to leave reviews on popular review platforms like Google Reviews, Trustpilot, or Yelp.</p>
          <div class="user">
             <img src="images/pic-3.jpg" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>Abhishek</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -130,11 +131,11 @@ if(isset($_COOKIE['user_id'])){
       </div>
 
       <div class="box">
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio consectetur assumenda fugit maxime unde at ex?</p>
+         <p>Testimonials: Display testimonials from satisfied customers directly on your website to showcase positive experiences.</p>
          <div class="user">
             <img src="images/pic-4.jpg" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>Istakhar</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -147,11 +148,11 @@ if(isset($_COOKIE['user_id'])){
       </div>
 
       <div class="box">
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio consectetur assumenda fugit maxime unde at ex?</p>
+         <p>Social Media: Monitor social media mentions and comments about your website to see what people are saying.</p>
          <div class="user">
             <img src="images/pic-5.jpg" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>Rabin</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -164,11 +165,11 @@ if(isset($_COOKIE['user_id'])){
       </div>
 
       <div class="box">
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio consectetur assumenda fugit maxime unde at ex?</p>
+         <p>Surveys and Questionnaires: Conduct surveys or questionnaires to collect feedback and reviews from website users.</p>
          <div class="user">
             <img src="images/pic-6.jpg" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>Aakash</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -181,11 +182,11 @@ if(isset($_COOKIE['user_id'])){
       </div>
 
       <div class="box">
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio consectetur assumenda fugit maxime unde at ex?</p>
+         <p>Continuous Improvement: Use feedback from reviews to identify areas of improvement for your website.</p>
          <div class="user">
             <img src="images/pic-7.jpg" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>Shivam</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>

@@ -104,8 +104,14 @@ if(isset($message)){
       <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
       <!-- <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a> -->
       <a href="contact.php"><i class="fas fa-headset"></i><span>contact us</span></a>
-      <a href="components/user_logout.php" onclick="return confirm('logout from this website?');"><i class="fa-solid fa-right-from-bracket"></i><span>logout</span></a>
-   </nav>
+      <?php
+        if (isset($user_id)) { // If the user is logged in, show the logout button
+        ?>
+            <a href="components/user_logout.php" onclick="return confirm('logout from this website?');"><i class="fa-solid fa-right-from-bracket"></i><span>logout</span></a>
+        <?php
+        }
+        ?>
+         </nav>
 
 </div>
 

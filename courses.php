@@ -82,8 +82,12 @@ if(isset($_COOKIE['user_id'])){
 
 
 
-<?php include 'components/footer.php'; ?>
+<footer class="footer" style="position:fixed;">
 
+   &copy; copyright @ <?= date('Y'); ?> by <span>sushil sharma</span> | all rights reserved!
+   <a href="admin/login.php">admin</a>
+
+</footer>
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
    
