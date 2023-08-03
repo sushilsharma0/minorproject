@@ -59,12 +59,14 @@ if(isset($message)){
 <section class="form-container">
 
    <form action="" method="post" enctype="multipart/form-data" class="login">
-      <h3>welcome back!</h3>
+      <h3>welcome back Admin!</h3>
       <p>your email <span>*</span></p>
       <input type="email" name="email" placeholder="enter your email" maxlength="50" required class="box">
       <p>your password <span>*</span></p>
       <input type="password" name="pass" placeholder="enter your password" maxlength="20" required class="box">
-      <p class="link">don't have an account? <a href="register.php">register new</a></p>
+      <!-- <p class="link">don't have an account? <a href="register.php">register new</a></p> -->
+      <!-- <a href="./forget_password.php">forget password ?</a> -->
+      <a href="./forget_password.php"><p style="color:red;" class="link">forgot Password ?</p></a>
       <input type="submit" name="submit" value="login now" class="btn">
    </form>
 

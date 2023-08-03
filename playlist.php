@@ -145,7 +145,7 @@ if(isset($_POST['save_list'])){
 
    <h1 class="heading">playlist videos</h1>
 
-   <div class="box-container">
+   <div class="box-container" style="margin-bottom:8rem;">
 
       <?php
          $select_content = $conn->prepare("SELECT * FROM `content` WHERE playlist_id = ? AND status = ? ORDER BY date DESC");

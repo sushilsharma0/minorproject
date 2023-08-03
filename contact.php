@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
 
    </div>
 
-   <div class="box-container">
+   <div class="box-container" style="margin-bottom:8rem;">
 
       <div class="box">
          <i class="fas fa-phone"></i>

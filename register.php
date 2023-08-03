@@ -1,5 +1,4 @@
 <?php
-
 include 'components/connect.php';
 
 if(isset($_COOKIE['user_id'])){
@@ -9,7 +8,6 @@ if(isset($_COOKIE['user_id'])){
 }
 
 if(isset($_POST['submit'])){
-
    $id = unique_id();
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
@@ -19,6 +17,11 @@ if(isset($_POST['submit'])){
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
    $cpass = sha1($_POST['cpass']);
    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+   $security_question = $_POST['security_question'];
+   $security_answer = $_POST['security_answer'];
+   $security_question = filter_var($security_question, FILTER_SANITIZE_STRING);
+   $security_answer = filter_var($security_answer, FILTER_SANITIZE_STRING);
 
    $image = $_FILES['image']['name'];
    $image = filter_var($image, FILTER_SANITIZE_STRING);
@@ -35,10 +38,10 @@ if(isset($_POST['submit'])){
       $message[] = 'email already taken!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm passowrd not matched!';
+         $message[] = 'confirm password not matched!';
       }else{
-         $insert_user = $conn->prepare("INSERT INTO `users`(id, name, email, password, image) VALUES(?,?,?,?,?)");
-         $insert_user->execute([$id, $name, $email, $cpass, $rename]);
+         $insert_user = $conn->prepare("INSERT INTO `users`(id, name, email, password, image, security_question, security_answer) VALUES(?,?,?,?,?,?,?)");
+         $insert_user->execute([$id, $name, $email, $cpass, $rename, $security_question, $security_answer]);
          move_uploaded_file($image_tmp_name, $image_folder);
          
          $verify_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ? LIMIT 1");
@@ -51,10 +54,9 @@ if(isset($_POST['submit'])){
          }
       }
    }
-
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +94,21 @@ if(isset($_POST['submit'])){
             <p>confirm password <span>*</span></p>
             <input type="password" name="cpass" placeholder="confirm your password" maxlength="20" required class="box">
          </div>
+         
+         <!-- Security Question Fields -->
+         
+         
       </div>
+      <p>Security Question <span>*</span></p>
+      <select name="security_question" required class="box">
+   <option value="" disabled selected>Select a security question</option>
+   <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+   <option value="What was the name of your first pet?">What was the name of your first pet?</option>
+   <option value="What city were you born in?">What city were you born in?</option>
+   <!-- Add more security questions here -->
+</select>
+<p>Security Question Answer <span>*</span></p>
+<input type="text" name="security_answer" placeholder="Enter your security question answer" maxlength="100" required class="box" autocomplete="off">
       <p>select pic <span>*</span></p>
       <input type="file" name="image" accept="image/*" required class="box">
       <p class="link">already have an account? <a href="login.php">login now</a></p>
@@ -112,6 +128,18 @@ if(isset($_POST['submit'])){
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!-- Footer and script includes... -->
+
 <?php include 'components/footer.php'; ?>
 
 <!-- custom js file link  -->
@@ -119,3 +147,4 @@ if(isset($_POST['submit'])){
    
 </body>
 </html>
+

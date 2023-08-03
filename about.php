@@ -43,7 +43,7 @@ if(isset($_COOKIE['user_id'])){
          <h3>why choose us?</h3>
          <p>
 Choose our LMS website because we offer a user-friendly interface with diverse course content and interactive learning tools. Our platform is mobile-compatible and provides detailed analytics for progress tracking. You can customize and brand the LMS to fit your organization, and we prioritize security and privacy. Our 24/7 support ensures a smooth learning experience, and the scalable platform is cost-effective.</p>
-         <a href="courses.html" class="inline-btn">our courses</a>
+         <a href="courses.php" class="inline-btn">our courses</a>
       </div>
 
    </div>
@@ -152,7 +152,7 @@ Choose our LMS website because we offer a user-friendly interface with diverse c
          <div class="user">
             <img src="images/pic-5.jpg" alt="">
             <div>
-               <h3>Rabin</h3>
+               <h3>Arjun Don</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
